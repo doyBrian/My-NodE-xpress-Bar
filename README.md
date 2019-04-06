@@ -1,6 +1,11 @@
 # My-NodE-xpress-Bar
 A simple drink order logger that uses MySQL, Node, Express, Handlebars and an ORM. 
 
+### Deployed App Link
+<a href="https://drive.google.com/file/d/1OjA9uqYTjrYgWopu6cuvtdgZ06hCI9ry/view">Click for DEMO</a>
+
+https://my-node-xpress-bar.herokuapp.com/
+
 ### Overview
 This project follows the MVC design pattern; uses Node and MySQL to query and route data in the app, and Handlebars to generate HTML.
 
