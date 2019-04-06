@@ -1,0 +1,44 @@
+<h1>Welcome to My-NodE-xpress Bar!</h1>
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col s6">
+        <h2>Ready For Pick Up</h2>
+        {{#each drinks}}
+          {{#unless pick_up}}
+            <div>
+              <form action="/drinks/{{id}}?_method=PUT" method="POST">
+                <button type="submit" class='drinkReady'> {{drink_name}}</button>
+              </form>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </div>
+
+      <div class="col s6">
+        <h2>Picked Up</h2>
+        {{#each drinks}}
+          {{#if pick_up}}
+            <div class='drink_picked_up'>
+              <div>
+                {{this.drink_name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</main>
+
+<h2>Order Drinks Here!</h2>
+
+<div class="row">
+  <div class="col s12">
+    <form action="/drinks" method="POST">
+      <input type="text" id="name" name="drink_name" placeholder="Type here">
+      <button type="submit" class="addDrinkButton">Submit Order</button>
+    </form>
+  </div>
+</div>
